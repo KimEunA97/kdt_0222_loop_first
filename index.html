@@ -14,17 +14,19 @@
 
   <script>
 
-    let pokemon = ["피카츄", "라이츄", "파이리", "꼬부기", "버터플"];
+    let pokemon = ["피카츄", "라이츄", "파이리", "꼬부기", "버터플", "야도란", "피죤투", "또가스", "또도가스"];
     let root = window["document"].getElementById("root");
 
-    //절차형 프로그래밍
-    //컴퓨터에게 시작과 끝을 알려준다.
-    for (
-      let index = 0; //숫자 0 을 index라는 변수에 담았다.
-      index < pokemon.length; //비교연산을 하고 있다. index라는 변수가 10보다 작으면 실행해. 10보다 크면 반복을 멈춘다.
-      index = index + 1 //이항연산자. 절차
-      ) { console.log(pokemon[index]); }
 
+    //동적 엘리먼트를 생성하였다.
+    //li 태그를 찍어내는 기계를 개발했다.
+    for (let i = 0; i < pokemon.length; i++) {
+      let li = document.createElement("li");
+      li.textContent = pokemon[i];
+      root.appendChild(li);
+    }
+    // createElement, appendChild : 내장함수.
+    // 규칙을 찾아라.
 
   </script>
 </body>
